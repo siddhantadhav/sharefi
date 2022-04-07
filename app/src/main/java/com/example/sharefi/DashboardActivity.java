@@ -29,7 +29,7 @@ public class DashboardActivity extends DrawerBaseActivity {
         super.onCreate(savedInstanceState);
         activityDashboardBinding = ActivityDashboardBinding.inflate(getLayoutInflater());
         setContentView(activityDashboardBinding.getRoot());
-        allocateActivityTitle("Dashboard");
+        allocateActivityTitle("Home");
         wifiList=(ListView)findViewById(R.id.myListView);
         wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
         wifiReceiver = new WifiReceiver();
