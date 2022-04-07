@@ -15,10 +15,16 @@
         <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/layout/content_layout.xml" value="0.3111413043478261" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/layout/main_drawer_header.xml" value="0.3111413043478261" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/menu/main_drawer_menu.xml" value="0.3609375" />
+        <entry key="..\:/sharefi/sharefi/app/src/main/res/drawable/ic_baseline_wifi_24.xml" value="0.137" />
+        <entry key="..\:/sharefi/sharefi/app/src/main/res/layout/activity_dashboard.xml" value="0.22826086956521738" />
+        <entry key="..\:/sharefi/sharefi/app/src/main/res/layout/activity_drawer_base.xml" value="0.1265625" />
+        <entry key="..\:/sharefi/sharefi/app/src/main/res/layout/activity_main.xml" value="0.1265625" />
+        <entry key="..\:/sharefi/sharefi/app/src/main/res/layout/list_item.xml" value="0.1265625" />
+        <entry key="..\:/sharefi/sharefi/app/src/main/res/layout/main_drawer_header.xml" value="0.1265625" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
