@@ -3,6 +3,7 @@ package com.example.sharefi;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -39,10 +40,13 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     public void txtSignInForgotPasswordClicked(View v){
-
+        Intent intent = new Intent(this, ForgotPasswordActivity.class);
+        startActivity(intent);
     }
-    public void txtSignInRegisterClicked(View v){
 
+    public void txtSignInRegisterClicked(View v){
+        Intent intent = new Intent(this, SignUpActivity.class);
+        startActivity(intent);
     }
     public void buttonSignInClicked(View v){
         String userName = editTextUserName.getText().toString().trim();
@@ -65,6 +69,7 @@ public class SignInActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(SignInActivity.this, "Successfully Signed In", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(SignInActivity.this, DashboardActivity.class));
                 }
                 else{
                     progressBar.setVisibility(View.GONE);

@@ -5,10 +5,16 @@
       <map>
         <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/drawable/button_sign_in.xml" value="0.2985" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/drawable/button_sign_up.xml" value="0.2985" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/layout/activity_dashboard.xml" value="0.3111413043478261" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/layout/activity_drawer_base.xml" value="0.3111413043478261" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/layout/activity_forgot_password.xml" value="0.3111413043478261" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/layout/activity_sign_in.xml" value="0.3609375" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/layout/activity_sign_up.xml" value="0.3111413043478261" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/layout/activity_splash.xml" value="0.3111413043478261" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/layout/activity_welcome.xml" value="0.3111413043478261" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/layout/content_layout.xml" value="0.3111413043478261" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/layout/main_drawer_header.xml" value="0.3111413043478261" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/sharefi/app/src/main/res/menu/main_drawer_menu.xml" value="0.3609375" />
       </map>
     </option>
   </component>
