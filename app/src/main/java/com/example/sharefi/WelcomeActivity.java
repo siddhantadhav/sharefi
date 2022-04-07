@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.google.android.gms.common.SignInButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -51,6 +52,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void onButtonSignInClicked(View view){
-
+        Intent intent = new Intent(WelcomeActivity.this, SignInActivity.class);
+        startActivity(intent);
     }
 }
