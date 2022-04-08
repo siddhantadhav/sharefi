@@ -64,16 +64,19 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
                 builder.setMessage("Do you want to Logout ?");
                 builder.setTitle("Logout");
                 builder.setCancelable(false);
+
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         // logout and go to sign in page
                         FirebaseAuth.getInstance().signOut();
                         Toast.makeText(DrawerBaseActivity.this,"Sign out Successful", Toast.LENGTH_LONG).show();
+
                         finish();
                     }
 
                 });
+
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {

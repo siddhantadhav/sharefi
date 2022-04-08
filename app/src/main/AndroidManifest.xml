@@ -19,12 +19,14 @@
         <activity
             android:name=".RegisterYourWifiActivity"
             android:exported="false" />
+
         <activity
             android:name=".DrawerBaseActivity"
             android:exported="false" />
         <activity
             android:name=".DashboardActivity"
             android:exported="true">
+
 
         </activity>
         <activity
