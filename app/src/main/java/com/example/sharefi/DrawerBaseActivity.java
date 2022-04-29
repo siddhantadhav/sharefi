@@ -12,17 +12,23 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
+
 public class DrawerBaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
+
 
     @Override
     public void setContentView(View view) {
@@ -40,6 +46,7 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.menu_drawer_open, R.string.menu_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
     }
 
     @Override
@@ -71,7 +78,7 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
                         // logout and go to sign in page
                         FirebaseAuth.getInstance().signOut();
                         Toast.makeText(DrawerBaseActivity.this,"Sign out Successful", Toast.LENGTH_LONG).show();
-
+                        startActivity(new Intent(DrawerBaseActivity.this, WelcomeActivity.class));
                         finish();
                     }
 

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "73481432650",
-    "project_id": "sharefi-f815a",
-    "storage_bucket": "sharefi-f815a.appspot.com"
+    "project_number": "517876747155",
+    "project_id": "sharefi-15d1a",
+    "storage_bucket": "sharefi-15d1a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:73481432650:android:00f1f837c8c080f6f700b3",
+        "mobilesdk_app_id": "1:517876747155:android:4c9e1339c14c3a6cb97666",
         "android_client_info": {
           "package_name": "com.example.sharefi"
         }
       },
       "oauth_client": [
         {
-          "client_id": "73481432650-5crd0cf9ges3vtmel3511ipbhq5hgorn.apps.googleusercontent.com",
+          "client_id": "517876747155-98k5bop9oc7rf6kjlfhc7d264bqe0snj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBY7RiEUPtxU3t6i4pDYYqYKqa-YwPamfE"
+          "current_key": "AIzaSyAruPKFgqwwV7BhQZ0ZyPPsQz9KjsKMf0U"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "73481432650-5crd0cf9ges3vtmel3511ipbhq5hgorn.apps.googleusercontent.com",
+              "client_id": "517876747155-98k5bop9oc7rf6kjlfhc7d264bqe0snj.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

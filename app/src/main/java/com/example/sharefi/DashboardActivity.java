@@ -11,8 +11,13 @@ import android.content.pm.PackageManager;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.sharefi.databinding.ActivityDashboardBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 import java.util.List;
 
@@ -24,12 +29,16 @@ public class DashboardActivity extends DrawerBaseActivity {
     List mywifiList;
     ActivityDashboardBinding activityDashboardBinding;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityDashboardBinding = ActivityDashboardBinding.inflate(getLayoutInflater());
         setContentView(activityDashboardBinding.getRoot());
         allocateActivityTitle("Home");
+
+
         wifiList=(ListView)findViewById(R.id.myListView);
         wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
         wifiReceiver = new WifiReceiver();
@@ -39,6 +48,7 @@ public class DashboardActivity extends DrawerBaseActivity {
         }else{
             scanWifiList();
         }
+
     }
 
     private void scanWifiList() {

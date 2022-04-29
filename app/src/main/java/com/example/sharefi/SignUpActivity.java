@@ -3,6 +3,7 @@ package com.example.sharefi;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -92,6 +93,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
                                         Toast.makeText(SignUpActivity.this, "User Registered Successfully", Toast.LENGTH_LONG).show();
+                                        startActivity(new Intent(SignUpActivity.this, DashboardActivity.class));
                                     }
                                     else{
                                         Toast.makeText(SignUpActivity.this, "User Failed To Registered Successfully", Toast.LENGTH_LONG).show();
