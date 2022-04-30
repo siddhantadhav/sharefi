@@ -14,6 +14,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -93,7 +95,12 @@ public class SignUpActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
                                         Toast.makeText(SignUpActivity.this, "User Registered Successfully", Toast.LENGTH_LONG).show();
+//                                        Intent intent = new Intent(SignUpActivity.this, DrawerBaseActivity.class);
+//                                        intent.putExtra("username", user.userName);
+//                                        intent.putExtra("email", user.email);
+//                                        startActivity(intent);
                                         startActivity(new Intent(SignUpActivity.this, DashboardActivity.class));
+
                                     }
                                     else{
                                         Toast.makeText(SignUpActivity.this, "User Failed To Registered Successfully", Toast.LENGTH_LONG).show();

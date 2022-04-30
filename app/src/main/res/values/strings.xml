@@ -2,4 +2,5 @@
     <string name="app_name">sharefi</string>
     <string name="menu_drawer_open">Drawer Open</string>
     <string name="menu_drawer_close">Drawer Close</string>
+<!--    <string name="drawerUsername">Your Name</string>-->
 </resources>

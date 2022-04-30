@@ -1,5 +1,6 @@
 package com.example.sharefi;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -10,8 +11,14 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.sharefi.databinding.ActivityDashboardBinding;
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,7 +36,12 @@ public class DashboardActivity extends DrawerBaseActivity {
     List mywifiList;
     ActivityDashboardBinding activityDashboardBinding;
 
+    TextView textViewUsername;
+    String setUsername;
+    private DatabaseReference mDatabase;
 
+    String SSID;
+    String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +49,6 @@ public class DashboardActivity extends DrawerBaseActivity {
         activityDashboardBinding = ActivityDashboardBinding.inflate(getLayoutInflater());
         setContentView(activityDashboardBinding.getRoot());
         allocateActivityTitle("Home");
-
 
         wifiList=(ListView)findViewById(R.id.myListView);
         wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
@@ -48,8 +59,25 @@ public class DashboardActivity extends DrawerBaseActivity {
         }else{
             scanWifiList();
         }
+//        new android.widget.AdapterView.OnClickListener()
 
-    }
+//        mDatabase.getDatabase().getReference();
+
+        wifiList.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                View view = getParent();
+                TextView txtSSID =(TextView) view.findViewById(R.id.txtWifiName);
+                SSID = txtSSID.getText().toString();
+//                password = mDatabase.child("WIFI").child(FirebaseAuth.getInstance().getUid()).child("wifiPassword").toString();
+
+
+                Toast.makeText(DashboardActivity.this, SSID, Toast.LENGTH_LONG).show();
+            }
+
+        });
+
+    };
 
     private void scanWifiList() {
         wifiManager.startScan();
@@ -60,5 +88,20 @@ public class DashboardActivity extends DrawerBaseActivity {
     private void setAdapter() {
         listAdapter=new ListAdapter(getApplicationContext(),mywifiList);
         wifiList.setAdapter(listAdapter);
+    }
+
+
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+//        wifiList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Toast.makeText(DashboardActivity.this, "clicked", Toast.LENGTH_LONG).show();
+//            }
+//        });
+
+
     }
 }

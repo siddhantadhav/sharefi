@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -13,6 +14,8 @@ public class ListAdapter extends BaseAdapter {
     Context context;
     LayoutInflater inflater;
     List<ScanResult>wifiList;
+
+
     public ListAdapter(Context context,List<ScanResult>wifiList) {
         this.context=context;
         this.wifiList=wifiList;
@@ -50,9 +53,11 @@ public class ListAdapter extends BaseAdapter {
 
         }
         holder.tvDetails.setText(wifiList.get(i).SSID);
+
         return view;
     }
     class Holder{
         TextView tvDetails;
     }
+
 }
