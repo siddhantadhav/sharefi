@@ -3,6 +3,7 @@ package com.example.sharefi;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -36,44 +37,44 @@ public class RegisterYourWifiActivity extends DrawerBaseActivity {
 
     }
 
+
 //    public void registerWifiBtnClicked(View v){
-//        String wifiSSID = editTextWifiSSID.getText().toString().trim();
-//        String wifiPassword = editTextWifiPassword.getText().toString().trim();
+//        String SSID = editTextWifiSSID.getText().toString().trim();
+//        String password = editTextWifiPassword.getText().toString().trim();
 //
-//        Wifi wifi = new Wifi(wifiSSID, wifiPassword);
+//        Wifi wifi = new Wifi(SSID, password);
 //
-//        FirebaseDatabase.getInstance().getReference("WIFI").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+//        FirebaseDatabase.getInstance().getReference("WIFI").child(FirebaseAuth.getInstance().getUid())
 //                .setValue(wifi).addOnCompleteListener(new OnCompleteListener<Void>() {
 //            @Override
 //            public void onComplete(@NonNull Task<Void> task) {
 //                if (task.isSuccessful()){
 //                    Toast.makeText(RegisterYourWifiActivity.this, "Wifi successfully registered", Toast.LENGTH_LONG).show();
 //                }
-//                else{
+//                else {
 //                    Toast.makeText(RegisterYourWifiActivity.this, "Could not register your WIFI", Toast.LENGTH_LONG).show();
 //                }
 //                finish();
 //            }
 //        });
 //    }
-
     public void registerWifiBtnClicked(View v){
         String SSID = editTextWifiSSID.getText().toString().trim();
         String password = editTextWifiPassword.getText().toString().trim();
 
-        Wifi wifi = new Wifi(SSID, password);
+        Map<String, String> wifi = new HashMap<>();
 
-        FirebaseDatabase.getInstance().getReference("WIFI").child(FirebaseAuth.getInstance().getUid())
-                .setValue(wifi).addOnCompleteListener(new OnCompleteListener<Void>() {
+        wifi.put(SSID, password);
+        FirebaseDatabase.getInstance().getReference("WIFI").setValue(wifi).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
                     Toast.makeText(RegisterYourWifiActivity.this, "Wifi successfully registered", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(RegisterYourWifiActivity.this, DashboardActivity.class));
                 }
                 else {
                     Toast.makeText(RegisterYourWifiActivity.this, "Could not register your WIFI", Toast.LENGTH_LONG).show();
                 }
-                finish();
             }
         });
     }

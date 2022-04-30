@@ -71,7 +71,6 @@ public class DashboardActivity extends DrawerBaseActivity {
                 SSID = txtSSID.getText().toString();
 //                password = mDatabase.child("WIFI").child(FirebaseAuth.getInstance().getUid()).child("wifiPassword").toString();
 
-
                 Toast.makeText(DashboardActivity.this, SSID, Toast.LENGTH_LONG).show();
             }
 
