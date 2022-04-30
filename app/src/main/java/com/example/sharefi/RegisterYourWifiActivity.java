@@ -65,7 +65,7 @@ public class RegisterYourWifiActivity extends DrawerBaseActivity {
         Map<String, String> wifi = new HashMap<>();
 
         wifi.put(SSID, password);
-        FirebaseDatabase.getInstance().getReference("WIFI").setValue(wifi).addOnCompleteListener(new OnCompleteListener<Void>() {
+        FirebaseDatabase.getInstance().getReference("WIFI").child(SSID).setValue(wifi).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
